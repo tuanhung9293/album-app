@@ -22,7 +22,7 @@ export function ButtonUpload ({ onClick, disabled = false }: TProps) {
         }}
         onClick={onClick}
       >
-        <Upload fill={disabled ? '#888' : '#000'} height='18px' />
+        <Upload fill={disabled ? '#888' : '#000'} height='16px' />
         <Text ml={1} color={disabled ? '#888' : '#000'}>Upload</Text>
       </ButtonFlexStyled>
     </Box>

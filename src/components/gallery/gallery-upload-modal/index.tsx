@@ -11,9 +11,10 @@ import appAPI from 'apis/app.api'
 type TProps = {
     modalRef: React.RefObject<TModalHandles>;
     onCloseModal: () => void;
+    onUploaded: () => void;
 }
 
-export function GalleryUploadModal ({ modalRef, onCloseModal }: TProps) {
+export function GalleryUploadModal ({ modalRef, onCloseModal, onUploaded }: TProps) {
   const [files, setFiles] = useState<File[]>([])
   const [album, setAlbum] = useState<ISelectOption<TAlbumType> | undefined>()
 
@@ -26,6 +27,7 @@ export function GalleryUploadModal ({ modalRef, onCloseModal }: TProps) {
   const handleUpload = async () => {
     await appAPI.uploadPhoto(album!.value, files)
     handleCloseModal()
+    onUploaded()
   }
 
   return (

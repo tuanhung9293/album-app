@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text } from 'rebass'
-import { ReactComponent as Trash } from 'assets/upload.svg'
+import { ReactComponent as Trash } from 'assets/trash.svg'
 import { ButtonFlexStyled } from './button-upload'
 
 type TProps = {

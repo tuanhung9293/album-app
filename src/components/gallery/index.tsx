@@ -102,6 +102,7 @@ export function Gallery () {
       <GalleryUploadModal
         modalRef={modalRef}
         onCloseModal={closeModal}
+        onUploaded={() => loadPhotos(0, limit)}
       />
     </Box>
   )
